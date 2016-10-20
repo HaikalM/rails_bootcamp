@@ -1,5 +1,6 @@
 <h1><%= @faculty.faculty_name %><hr /></h1>
 
+<<<<<<< HEAD
 <h2>Gender</h2>
 <ul>
 	<% @genders.each_with_index  do |gender, index| %>
@@ -14,9 +15,28 @@
 	<% end %>
 </ul>
 
+=======
+%-  
+>>>>>>> 28fbec7baca1ea9d9fc44bfb7d302ccc03f7b8bd
 <h2>Prodi</h2>
 <ul>
 	<% @programs.each_with_index  do |prodi, index| %>
 	<li><%= prodi.program_name %> = <%= prodi.students.count %> Mahasiswa</li>
 	<% end %>
 </ul>
+
+<h2>Gender</h2>
+<ul>
+	<% @genders.each_with_index  do |jk, index| %>
+	<li><%= jk.name%> = <%= jk.students.count %> Mahasiswa</li>
+	<% end %>
+</ul>  
+ 
+
+
+<h2>Angkatan</h2>
+<ul>
+	<% @bunches.each_with_index  do |angkatan, index| %>
+	<li><%= angkatan.name %> </li>
+	<% end %>
+</ul> 
