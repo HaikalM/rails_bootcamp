@@ -1,5 +1,19 @@
 <h1><%= @faculty.faculty_name %><hr /></h1>
 
+<h2>Gender</h2>
+<ul>
+	<% @genders.each_with_index  do |gender, index| %>
+	<li><%= gender.name %> = <%= @faculty.students.where(:gender => gender).count %> Mahasiswa</li>
+	<% end %>
+</ul>
+
+<h2>Angkatan</h2>
+<ul>
+	<% @bunches.each_with_index  do |bunch, index| %>
+	<li><%= bunch.name %> = <%= @faculty.students.where(:bunch => bunch).count %> Mahasiswa</li>
+	<% end %>
+</ul>
+
 <h2>Prodi</h2>
 <ul>
 	<% @programs.each_with_index  do |prodi, index| %>
